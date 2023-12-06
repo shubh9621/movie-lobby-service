@@ -16,6 +16,11 @@ export const postNewMovie = async (req: any, res: any) => {
     try {
         const service = new Movie();
         const newMovie = req.body;
+        const role = req.headers?.role;
+
+        if (role !== 'admin') {
+            return res.status(400).json('you are not authorized to perform this');
+        }
 
         if (newMovie === null || newMovie === undefined) {
             return res.status(400).json('Missing required inputs');

@@ -3,7 +3,7 @@
 ## Prerequisities
 - Add your own .env file with MongoDB connect URL
 
-## Steps to run the project run the below commands
+## To run the project execute the below commands
 - `git clone `
 - `npm i`
 - `npm run build && npm start`
